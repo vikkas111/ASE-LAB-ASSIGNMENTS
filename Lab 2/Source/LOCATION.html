@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="" data-ng-app="geolocation">
+<head>
+    <meta t="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+    <script src=https://maps.googleapis.com/maps/api/js?key=AIzaSyAtnHkXoGgQJg4T5Rj6VMaJzratCCjhZFI&v=3.exp&sensor=true""></script>
+    <style>
+        #map-canvas {
+            width: 550px;
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="geo" ng-controller="googlemapoutput">
+    <p> Geolocation Service: Displays your current location </p><br/> <br/>
+    <div id="map-canvas"></div>
+</div>
+</body>
+</html>
+
+<script>
+    angular.module('geolocation', [])
+        .controller('googlemapoutput', function ($scope) {
+            var map;
+            var mapOptions;
+            $scope.initialize = function () {
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    var pos = new google.maps.LatLng(
+                        position.coords.latitude,
+                        position.coords.longitude);
+                    var mapOptions = {
+                        zoom: 16,
+                        center: pos
+                    };
+                    map = new google.maps.Map(document.getElementById('map-canvas'),
+                        mapOptions);
+                    var marker = new google.maps.Marker({
+                        position: pos,
+                        map: map
+                    });
+                });
+            };
+            google.maps.event.addDomListener(window, 'load', $scope.initialize);
+        });
+</script>
