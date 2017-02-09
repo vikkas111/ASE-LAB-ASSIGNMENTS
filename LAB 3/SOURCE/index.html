@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <meta name="website" content="Lab3">
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        .button {
+            background-color: #008CBA; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+
+        function onSuccess(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            gapi.client.load('plus', 'v1', function () {
+                var request = gapi.client.plus.people.get({
+                    'userId': 'me'
+
+                });
+                //Display the user details
+                request.execute(function (resp) {
+                    var profileHTML = '<div class="profile"><div class="head">Welcome '+resp.name.givenName+'! <a href="javascript:void(0);" onclick="signOut();">Sign out</a></div>';
+                    profileHTML += '<img src="'+resp.image.url+'"/><div class="proDetails"><p>'+resp.displayName+'</p><p>'+resp.emails[0].value+'</p><p>'+resp.gender+'</p><p>'+resp.id+'</p><p><a href="'+resp.url+'">View Google+ Profile</a></p></div></div>';
+                    $('.userContent').html(profileHTML);
+                    $('#gSignIn').slideUp('slow');
+                });
+            });
+        }
+        function onFailure(error) {
+            alert(error);
+        }
+        function renderButton() {
+            gapi.signin2.render('gSignIn', {
+                'scope': 'profile email',
+                'width': 240,
+                'height': 50,
+                'longtitle': true,
+                'theme': 'dark',
+                'onsuccess': onSuccess,
+                'onfailure': onFailure
+            });
+        }
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                $('.userContent').html('');
+                $('#gSignIn').slideDown('slow');
+            });
+        }
+    </script>
+
+</head>
+</style>
+<body>
+<div style="text-align: center;"><a class='login' href='https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=851899634116-2ajrg4j0kn0kf6e7smtjlp6o0mrvuca9.apps.googleusercontent.com&redirect_uri=http://localhost:63342/3/mashup.html?_ijt=r5np8e84063sg63epgij1pgm30&scope=email&access_type=online&approval_prompt=auto'><img src='https://lh3.googleusercontent.com/N-AY2XwXafWq4TQWfua6VyjPVQvTGRdz9CKOHaBl2nu2GVg7zxS886X5giZ9yY2qIjPh=w300' height='48px'/></a></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                   <br/><br/>
+<center><a href="file:///C:/Users/Balaji_N/Desktop/ass3.html"><button class="button">Go to Mashup</button></a></center>
+                                                                                                                </body>
+                                                                                                                  </html>

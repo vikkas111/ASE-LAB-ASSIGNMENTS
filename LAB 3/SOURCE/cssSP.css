@@ -1,0 +1,108 @@
+.bgg{
+    background:url("img9.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family:Times New Roman;
+    text-decoration-color: #447eff;
+    color: #7aa1ff;
+    align-content: center;
+    font-size: 20px;
+}
+.wrapper {
+    text-align:center;
+}
+#info {
+    font-size: 30px;
+}
+#div_start {
+    float: right;
+}
+#headline {
+    text-decoration: none
+}
+#results {
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid #7591ff;
+    padding: 15px;
+    text-align: left;
+    min-height: 150px;
+    color: white;
+}
+#start_button {
+    border: 0;
+    background-color:transparent;
+    padding: 0;
+}
+.interim {
+    color: gray;
+}
+.final {
+    color: black;
+    padding-right: 3px;
+}
+.button {
+
+    display: none;
+}
+.marquee {
+    margin: 20px auto;
+}
+
+#buttons {
+
+    margin: 10px 0;
+    position: relative;
+    top: -50px;
+}
+
+#copy {
+    margin-top: 20px;
+}
+
+.abc
+{
+    margin: 0 auto;
+    width: 60%;
+    border: lightsalmon;
+}
+#copy > div {
+    display: none;
+    margin: 0 70px;
+}
+
+a.c1 {font-weight: normal;}
+.table1{
+    font-size: 15px;
+    color: white;
+    font-family: "Arial Black" ;
+}
+.tb1{
+    background-color: #5ba4ff;
+}
+.myedit{
+    font-size: 15px;
+    font-family: "Times New Roman";
+    color: #79a1ff;
+}
+.btn-primary{
+    background-color: #6d91ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+h2.h22{
+    float: right;
+    font-size: 25px;
+    font-family: "Times New Roman";
+    font-weight: normal;
+}
