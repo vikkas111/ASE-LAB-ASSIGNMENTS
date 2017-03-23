@@ -1,0 +1,25 @@
+form{
+    padding-left:20%;
+    padding-right: 20%;
+    padding-top: 3%;
+    color: #777777;
+    font-size: large;
+    font-family: "Times New Roman";
+}
+body{
+    background-image: url("bg.jpg");
+	background-size: 1000px 700px;
+}
+.btn{
+    width: 20%;
+}
+.centered
+{
+    text-align: center;
+}
+.container{
+    padding-left:15%;
+    padding-right:15%;
+    font-size: large;
+    font-family: "Times New Roman";
+}

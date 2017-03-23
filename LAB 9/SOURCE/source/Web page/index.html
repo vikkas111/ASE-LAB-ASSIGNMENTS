@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>MOVIE SEARCH</title>
+    <div class="container">
+        <center><h1>MOVIE SEARCH</h1></center>
+        </div>
+</head>
+<body ng-app=search>
+<div ng-controller=searchctrl>
+    <form>
+    <div class="form-group"> <label for="height"></label>
+        <input type="text" class="form-control" placeholder="Enter movie title" id="height" ng-model="movie_title">
+    </div>
+<br><br>
+    </form>
+<div class="centered">
+    <button class="btn btn-primary" ng-click="search()">SEARCH</button>
+</div>
+    <div class="container">
+    <p ng-model=movie>
+        <br><br>
+        <div class="bg-success"><b>Title:</b>&nbsp&nbsp{{movie.Title}} </div>
+        <div class="bg-success"><b>Released:</b>&nbsp&nbsp{{movie.Released}} </div>
+		<div class="bg-success"><b>Genre:</b>&nbsp&nbsp{{movie.Genre}} </div>
+		<div class="bg-success"><b>Plot:</b>&nbsp&nbsp{{movie.Plot}} </div>
+		<div class="bg-warning"><b>Plot in Spanish:</b>&nbsp&nbsp{{movie.Plot_ESP}} </div>
+		<div class="bg-success"><b>Country:</b>&nbsp&nbsp{{movie.Country}} </div>
+        <div class="bg-success"><b>Rating:</b>&nbsp&nbsp{{movie.Rating}} </div>
+		<div class="bg-success"><b>Votes:</b>&nbsp&nbsp{{movie.Votes}} </div>
+		<div class="bg-warning"><b>NYTimes Review:</b>&nbsp&nbsp{{movie.linkv}} </div>
+		<hr>
+    </p>
+        </div>
+</div>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed!";
+}
+</script>
+</body>
+</html>
