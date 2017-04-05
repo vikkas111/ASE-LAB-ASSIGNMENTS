@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Page</title>
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+	<script src="app.js"></script>
+	<style>
+	body{
+    background-image:url("img/bg.jpg");
+    background-size: 1400px 900px;
+}
+	.formReg{
+    padding-left:25%;
+    padding-top: 7%;
+    color: #761c19;
+    font-size: medium;
+    float: left;
+    width: 50%;
+}
+	</style>
+</head>
+
+<body ng-app=demo>
+<div ng-controller=MongoController>
+	<form class="formReg" id="register">
+    <div class="form-group"> <label for="FullName"></label>
+        <input type="text" class="form-control" placeholder="FullName" id="FullName" ng-model="formData.FullName">
+    </div>
+    <br>
+    <div class="form-group"> <label for="Nationality"></label>
+        <input type="text" class="form-control" placeholder="Nationality" id="Nationality" ng-model="formData.Nationality">
+    </div>
+    <br>
+    <div class="form-group"> <label for="Password"></label>
+        <input type="password" class="form-control" placeholder="Password" id="Password" ng-model="formData.Password">
+    </div>
+    <br>
+    <div class="form-group"> <label for="Email"></label>
+        <input type="email" class="form-control" placeholder="Email" id="Email" ng-model="formData.Email">
+    </div>
+    <br>
+    <div class="form-group"> <label for="Phone"></label>
+        <input type="tel" class="form-control" placeholder="Mobile Number" id="PhoneNumber" ng-model="formData.Phone">
+    </div>
+    <br>
+    <div class="centered">
+        <button class="btn btn-lg btn-success" ng-click="insert()">Sign up</button>
+    </div>
+</form>
+	
+</div>	
+</body>
+</html>

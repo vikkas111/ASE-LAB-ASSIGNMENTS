@@ -1,0 +1,74 @@
+input[type=submit] {
+    padding:5px 15px; 
+    background:#9fa; 
+	width:50%;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+
+.btn{
+    width: 18%;
+}
+
+.buttons
+{
+    text-align: center;
+    padding-top: 7%;
+}
+
+table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+table tr:nth-child(odd) {
+    background-color: #d1f4e9;
+}
+table tr:nth-child(even) {
+    background-color: #f2f6f9;
+}
+
+body{
+    background-image:url("img/bg.jpg");
+    background-size: 1450px 900px;
+}
+
+.cv{
+    table-layout: fixed;
+    padding-left:27%;
+    padding-right: 60%;
+    text-align: right;
+    display: inline-block;
+    color: #204d74;
+    font-size: 14px;	
+}
+
+.formU{
+    padding-left:10%;
+    padding-right: 5%;
+    padding-top: 5%;
+    color: #204d74;
+    font-size: medium;
+    width: 50%;
+}
+.formD{
+    padding-left:10%;
+    padding-right: 5%;
+    padding-top: 5%;
+    color: #204d74;
+    font-size: medium;
+	width: 50%;
+}
+input[type=submit] {
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-family: "Calibre";
+}
+
+

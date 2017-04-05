@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="nodejspgm.js"></script>
+</head>
+<body ng-app="demo">
+
+<div ng-controller="MongoController" ng-init="records()" >
+    <div id="container" class="cv" >
+    </div><br>
+
+    <form method="post" action="http://127.0.0.1:8081/delete" class="formD" autocomplete="on">
+        <input type="text" class="form-control" name="delid" id="delid" placeholder="Enter ID of the record which you want to Delete" >
+        <div>
+        <br><center><input type="submit" value="Delete"></center>
+        </div>
+    </form>
+    <form method="post" action="http://127.0.0.1:8081/update" class="formU">
+        <input type="text" class="form-control" name="idv" id="idv" placeholder="Enter ID of the record which you want to Update"  ><br>
+        <input type="text" class="form-control" name="fname" id="fname" placeholder="FullName"  ><br>
+        <input type="text" class="form-control" name="nat" id="nat" placeholder="Nationality"  ><br>
+        <input type="email" class="form-control" placeholder="Email" name="email" id="email"><br>
+        <input type="tel" class="form-control" placeholder="Contact" name="phnum" id="phnum"><br>
+        <div class="centered">
+        <input type="submit" value="Update">
+        </div>
+        </form>
+</div>
+</body>
+</html>
